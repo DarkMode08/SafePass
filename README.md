@@ -5,20 +5,12 @@ Este proyecto implementa un sistema de autenticación y gestión de us
 ### Características
 
 - **Registro de Cuenta:** Permite a los usuarios crear una cuenta proporcionando su nombre, correo electrónico y contraseña.
-
 - **Inicio de Sesión:** Los usuarios pueden iniciar sesión con sus credenciales.
-
 - **Base de Datos SQL Server:** Almacena de forma segura la información de los usuarios, incluyendo contraseñas encriptadas y tokens de autenticación.
 
 ### Tecnologías Utilizadas
 
 - **[ASP.NET](https://asp.net/) Core MVC:** Framework para construir aplicaciones web robustas y escalables.
-
 - **Entity Framework Core:** ORM para interactuar con la base de datos SQL Server.
-
 - **Identity:** Manejo de autenticación y autorización de usuarios.
-
-
-### Despliegue
-
-Para ejecutar este proyecto, asegúrate de tener configurado SQL Server y actualizar la cadena de conexión en `appsettings.json`. Luego, aplica las migraciones y ejecuta la aplicación.
+- **Bootstrap:** Framework de CSS para crear una interfaz de usuario moderna y responsiva.
