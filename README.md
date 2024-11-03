@@ -17,4 +17,5 @@ Este proyecto implementa un sistema de autenticación y gestión de us
 - 
 ### Despliegue
 
-Para ejecutar este proyecto, asegúrate de tener configurado SQL Server y actualizar la cadena de conexión en `appsettings.json`. Luego, aplica las migraciones y ejecuta la aplicación.
+Para ejecutar este proyecto, asegúrate de tener configurado SQL Server y actualizar la cadena de conexión en
+`appsettings.json`. Luego, aplica las migraciones y ejecuta la aplicación.
