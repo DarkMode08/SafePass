@@ -1,14 +1,15 @@
 ## Proyecto de Autenticación en [ASP.NET](https://asp.net/) Core Web MVC
 
-Este proyecto implementa un sistema de autenticación y gestión de usuarios utilizando
-[ASP.NET](https://asp.net/) Core MVC y una base de datos SQL Server. Incluye las funcionalidades básicas de registro de cuenta, inicio
-de sesión, y manejo de usuarios.
+Este proyecto implementa un sistema de autenticación y gestión de usuarios utilizando [ASP.NET](https://asp.net/) Core MVC y una base de datos SQL Server. Incluye las funcionalidades básicas de registro de cuenta,
+inicio de sesión, y manejo de usuarios.
 
 ### Características
 
-- **Registro de Cuenta:** Permite a los usuarios crear una cuenta proporcionando su nombre, correo electrónico y contraseña.
+- **Registro de Cuenta:** Permite a los usuarios crear una cuenta proporcionando su nombre, correo electrónico y
+  contraseña.
 - **Inicio de Sesión:** Los usuarios pueden iniciar sesión con sus credenciales.
-- **Base de Datos SQL Server:** Almacena de forma segura la información de los usuarios, incluyendo contraseñas encriptadas y tokens de autenticación.
+- **Base de Datos SQL Server:** Almacena de forma segura la información de los usuarios, incluyendo contraseñas
+  encriptadas y tokens de autenticación.
 
 ### Tecnologías Utilizadas
 
