@@ -14,3 +14,7 @@ Este proyecto implementa un sistema de autenticación y gestión de us
 - **Entity Framework Core:** ORM para interactuar con la base de datos SQL Server.
 - **Identity:** Manejo de autenticación y autorización de usuarios.
 - **Bootstrap:** Framework de CSS para crear una interfaz de usuario moderna y responsiva.
+- 
+### Despliegue
+
+Para ejecutar este proyecto, asegúrate de tener configurado SQL Server y actualizar la cadena de conexión en `appsettings.json`. Luego, aplica las migraciones y ejecuta la aplicación.
