@@ -1,0 +1,110 @@
+﻿@model SafePass.ViewModels._UserViewModels
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-image: url(/Background.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            font-family: "Lora", serif;
+            font-optical-sizing: auto;
+            font-style: bold;
+        }
+        .card {
+            background-color: transparent;
+        }
+        .login-form {
+            display: flex;
+            justify-content: start;
+        }
+        h1{
+            font-family: "Lora", serif;
+            font-optical-sizing: auto;
+            font-style: italic;
+            text-align: center;
+            margin: 16px;
+        }
+        button.btn.google-btn.btn-block.rounded-pill{
+            margin-top: 5px;
+            background-color: #131939;
+            color: white;
+        }
+        button.btn.rounded{
+            background-color: #131939;
+            color: white;
+            margin-top: 8px;
+        }
+        a.text-decoration-none{
+            color: #131939;
+            font-weight: bold;
+        }
+        hr{
+            color: #303034;
+            opacity: .50;
+        }
+        form{
+            color: #303034;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex login-form">
+        <div class="row w-100">
+            <div class="col-md-6">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <h1>Sign Up</h1>
+                        <div class="d-grid gap-2 mb-3">
+                            <button class="btn google-btn btn-block rounded-pill">
+                                <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google logo">
+                                Sign up with Google
+                            </button>
+                        </div>
+                        <hr>
+                        <form asp-controller="Access" asp-action="Register" method="post">
+                            <input class="form-control mb-3" type="text" placeholder="Name or UserName" required asp-for="Name" />
+                            <input class="form-control mb-3" type="text" placeholder="Email" required asp-for="Email" />
+                            <div class="input-group mb-3">
+                                <input class="form-control" type="password" placeholder="Password" required asp-for="Password" />
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control mb-3" type="password" placeholder="Confirm Password" required asp-for="Confirm_Password" />
+                            </div>
+                            <div class="d-grid gap-2 mb-3">
+                                <button class="btn rounded" type="submit">Sign Up</button>
+                            </div>
+                            @if (ViewData["Message"] != null)
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    @ViewData["Message"]
+                                </div>
+                            }
+                        </form>
+                        <div class="text-center">
+                            <small class="text-muted">Don't have an account? <a asp-controller="Access" asp-action="Login" class="text-decoration-none">Sign In</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

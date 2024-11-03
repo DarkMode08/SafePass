@@ -1,0 +1,25 @@
+﻿@using System.Security.Claims;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="~/css/Styless.css" rel="stylesheet" asp-append-version="true" />
+</head>
+<body class="cover-container">
+
+    <div class="text-center d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <!-- Si hay un usuario identificado, Muestra el nombre en pantalla -->
+        @if (User.Identity!.IsAuthenticated)
+        {
+            <h1 class="display-4">
+                Welcome
+                <!-- Muestra los Datos Capturados del Usuario -->
+                @User.Claims.Where(c => c.Type == ClaimTypes.Name).Select(c => c.Value).SingleOrDefault()
+            </h1>
+        }
+    </div>
+</body>
+</html>
